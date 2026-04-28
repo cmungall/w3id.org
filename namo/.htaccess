@@ -6,7 +6,7 @@ RewriteRule ^vocab$ https://monarch-initiative.github.io/namo/
 RewriteRule ^vocab\/(.*)$ https://monarch-initiative.github.io/namo/ [R=301,L]
 
 # schema submodules
-RewriteRule ^schema\/(.*)$ https://raw.githubusercontent.com/monarch-initiative/namo/main/src/namo/ [R=301,L]
+RewriteRule ^schema\/(.*)$ https://raw.githubusercontent.com/monarch-initiative/namo/main/src/namo/$1 [R=301,L]
 
 # Schema artefacts use raw Github URLs
 # if suffix is yaml, redirect to LinkML YAML schema
@@ -20,4 +20,4 @@ RewriteRule ^namo.owl.ttl$ https://raw.githubusercontent.com/monarch-initiative/
 
 # Schema elements use Github Pages
 # Rewrite Base URL
-RewriteRule ^(.*)$ https://monarch-initiative.github.io/namo/elements/ [R=302,L]
+RewriteRule ^(.*)$ https://monarch-initiative.github.io/namo/elements/$1 [R=302,L]
